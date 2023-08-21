@@ -1,0 +1,13 @@
+
+
+.row {
+    min-height:30px;
+    padding:10px 0px 10px 0px;
+}
+
+.rowLine {
+    border-left:0px solid #CCCCCC;
+    border-right:0px solid #CCCCCC;
+    border-bottom:1px dotted #CCCCCC;
+    border-top:0px solid #CCCCCC;
+}
