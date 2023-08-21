@@ -2,6 +2,30 @@
     주석처리 방법 유의
     external style
 */
+.box1 {
+    width:400px;
+    height:100px;
+    background: #ABCDEF;
+    border:2px solid #FF0000;
+    /* display:block; */
+    float:left;
+    padding:10px;
+    margin:10px; 
+}
+.box2 {
+    width:200px;
+    height:200px;
+    background: #0099ff;
+    border:2px solid #FF0000;
+    color:#FF0000;
+    line-height:200%;
+    border-radius:0px 10px 20px 30px;
+    /* display:block; */
+    float:right;
+    padding:10px;
+    margin:10px;
+}
+
 
 #div1 { color:#FF0000; background-color: #ABCDEF; }
 .man { color:#ad2570}
