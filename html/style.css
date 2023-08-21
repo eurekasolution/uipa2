@@ -1,0 +1,12 @@
+/* style.css 
+    주석처리 방법 유의
+    external style
+*/
+
+#div1 { color:#FF0000; background-color: #ABCDEF; }
+.man { color:#ad2570}
+div { font-weight:bold; color:skyblue; }
+
+i, span {
+    color:#FF0000;
+}
