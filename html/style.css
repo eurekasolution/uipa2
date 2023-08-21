@@ -2,6 +2,33 @@
     주석처리 방법 유의
     external style
 */
+
+#container {
+    width:900px;
+    padding:20px;
+    margin:0 auto; /* 화면의 중앙에 배치 */
+}
+
+#header {
+    padding:20px;
+    width: 900px;
+}
+
+#contents {
+    padding:20px;
+    width: 500px;
+    float:left;
+    line-height:200%;
+}
+
+#header {
+    padding:20px;
+    width: 200px;
+    float:right;
+    
+}
+
+
 .box1 {
     width:400px;
     height:100px;
