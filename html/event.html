@@ -37,6 +37,26 @@
                 <button type="button" class="btn btn-primary" onMouseOver="eventMouseOver()" onMouseOut="eventMouseOut()">클릭</button>
             </div>
         </div>
+
+        <div class="row rowLine">
+            <div class="col">
+                Input
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="input" onKeyUp="eventKeyUp()">
+            </div>
+        </div>
+
+        <div class="row rowLine">
+            <div class="col">
+                한글
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="kname" onKeyUp="checkName()">
+            </div>
+        </div>
+
+
         <div class="row rowLine">
             <div class="col">
                 Display
@@ -61,6 +81,29 @@
         function eventMouseOut()
         {
             display.innerHTML = "MouseOut";
+        }
+
+        function eventKeyUp()
+        {
+            let input = document.querySelector("#input");
+            display.innerHTML = input.value;
+        }
+
+        function checkName()
+        {
+            let kname = document.querySelector("#kname");
+
+            var regexp = /^[가-힣]{3,4}$/;
+
+            if(!regexp.test(kname.value))
+            {
+                display.innerHTML = "한글로 2-4글자만 가능합니다.";
+            }else
+            {
+                display.innerHTML = "한글이름으로 적당합니다.";
+            }
+
+            
         }
     </script>
 </body>
