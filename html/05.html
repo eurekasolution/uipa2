@@ -42,6 +42,16 @@
                 <div id="memo"></div>
             </div>
         </div>
+
+        <div class="row rowLine">
+            <div class="col">
+                <input type="number" id="age" class="form-control" value="10" min="1" max="100" step="10" onChange="checkAge()">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" value="홍a길동">
+            </div>
+        </div>
+
     </div>
 
     <script>
@@ -197,13 +207,87 @@
                 },
 
                 "setting" : {
-                    
+
                 }
             }
 
 
+            연산자 : +, - , *, /, %, 
+            비트연산자 : &, |
+
+
+            stack[++top] = 3
+            a = 3;
+            a == b , > , >= , < , <=
+            a === b,
+            a !== b
+
+            3항연산자 : 
+
+            a = 1;
+            b = 2;
+
+            max = a>b ? a : b;
+
+            if( a > b )
+                max = a;
+            else
+                max = b;
         */
 
+        let x = 1;
+
+        console.log("x ++ : " + (x ++));
+        console.log("x ++ : " + (++x));
+
+        a = 1;
+        b = 2;
+
+        if(a > b) 
+        {
+
+        }
+
+        function checkAge()
+        {
+            let age = document.querySelector("#age");
+            if(parseInt(age.value) > 20)
+                console.log("over 20" + (parseInt(age.value) + 1));
+            else 
+                console.log("under 20" + (parseInt(age.value) + 1));
+        }
+
+        for(let a = 1; a < 10; a ++)
+        {
+
+        }
+
+        a = 10;
+        while(a>0)
+        {
+            console.log(a);
+            a--;
+        }
+
+        function add(a, b)
+        {
+            return a + b;
+        }
+
+        let sum = add(1, 2);
+
+        /*
+            function sayHi() 
+            {
+                console.log("i am say hi");
+            }
+        */
+        const sayHi = () => { 
+            console.log("i am say hi");
+        };
+
+        sayHi();
+ 
     </script>
 
 </body>
