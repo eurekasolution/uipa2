@@ -1,3 +1,5 @@
+github.com/eurekasolution/uipa2
+
 create table first (
    id char(20) unique,
    name char(20),
