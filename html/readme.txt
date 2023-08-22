@@ -21,3 +21,5 @@ $pass = "1111"
 
 select * from first where id='$id' and pass='$pass';
 select * from first where  id='' or 2>1  -- ' and pass='';
+
+
