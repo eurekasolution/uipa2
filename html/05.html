@@ -287,7 +287,85 @@
         };
 
         sayHi();
+
+        const square = (x) => {
+            return x * x;
+        }
+
+        const square2 = x => x * x;
+
+        console.log("square = " + square(3));
+
+        const add3 = (x, y) => {
+            return x + y;
+        }
+
+        const add2 = (x, y) => x + y;
+
+        const someArray = [1, 2, 3, 4, 5];
+        someArray.forEach(function(item){
+            console.log(item);
+        });
+
+        console.log("--------------------");
+        someArray.forEach( item => console.log(item));
+
+        /*
+            int[] numbers = new Integer[5];
+            for(num in numbers)
+            {
+                // print num
+            }
+
+        */
+
+        const otherArray = [
+            { "name" : "kim", "age" : 12 },
+            { "name" : "lee", "age" : 34 }
+         ];
+
+         otherArray.forEach( item => console.log(item.name + ", " + item["age"]));
+
+        var globalNum = 3;
+
+        function testNum()
+        {
+
+        }
+
+        /*
+            익명함수 : C언어의 펑션 포인터
+        */
+
+        var functionName = function(a, b)
+        {
+            let sum = a + b;
+            return sum;
+        }
  
+        var result = functionName(3, 4);
+
+        /*
+            즉시 실행 함수
+            (function(){
+
+            })();
+        */
+
+        var result = (function(){
+            return 10 + 20;
+        })();
+
+        console.log("result = " + result);
+
+        const hi = function() {
+            return "Hi~~";
+        }
+
+        const hello = () => { return "Hi~"};
+
+        const hi2 = () => "Hi 2";
+
     </script>
 
 </body>
