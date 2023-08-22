@@ -29,6 +29,17 @@
                 <button type="button" class="btn btn-primary" onClick="eventClick()">클릭</button>
             </div>
         </div>
+
+        <div class="row rowLine">
+            <div class="col">
+                event button
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="button">클릭</button>
+            </div>
+        </div>
+
+
         <div class="row rowLine">
             <div class="col">
                 click
@@ -105,6 +116,44 @@
 
             
         }
+
+        var button = document.querySelector("#button");
+        button.onclick = function()
+        {
+            alert('click...');
+            button.style.border = "3px solid #FF0000";
+        }
+        button.onmouseover = function()
+        {
+            button.style.border = "3px solid #00FF00";
+        }
+        button.onmouseout = function()
+        {
+            button.style.border = "3px solid #0000FF";
+        }
+
+        display.innerHTML = "navigator = " + navigator + "<br>";
+        display.innerHTML = "navigator.vendor = " + navigator.vendor + "<br>";
+
+        var now = new Date();
+        display.innerHTML += now + "<br>";
+        for(let i = 1; i<7; i++)
+        {
+            let rand = parseInt( Math.random() * 45 +1);
+            display.innerHTML += rand + "<br>";
+        }
+
+        var book = {
+            title : "Javascript",
+            author : "UIPA",
+            price : 1000,
+            info : function() {
+                return "Title : " + this.title + ", price = " + this.price ;
+            }
+        };
+
+        display.innerHTML += book.info() + "<br>";
+
     </script>
 </body>
 </html>
