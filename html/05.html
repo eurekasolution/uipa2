@@ -36,6 +36,12 @@
                 <button type="button" class="btn btn-primary" onClick="counter2(20)">카운터</button>
             </div>
         </div>
+
+        <div class="row rowLine">
+            <div class="col">
+                <div id="memo"></div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -95,12 +101,44 @@
         counter2("홍길동");
 
         let birthYear = 2000;
-        let a = 0.1;
+        let a = 11;
         let b = 0.2;
         let c = a + b;
 
+        console.log("c = " + c + ", type of c = " + typeof(c));
+        /*
+            1 + 2 = 3
 
+            "test" + 123  = "test123";
+            "1" + "2" = "12";
 
+            문자열 : 문자들의 합 ""
+
+            boolean true/false
+            b
+        */
+
+        var memo = document.querySelector("#memo");
+        memo.innerText +=  "Hello<br>";
+        memo.innerHTML += "type of c = " + typeof(c) + "<br>";
+
+        let isOn = true;
+
+        memo.innerHTML += (2>1) + "<br>";
+        memo.innerHTML += "type of isOn = " + typeof(isOn);
+
+        //let init;
+        let init = null;
+        memo.innerHTML += "type of init = " + typeof(init) + "<br>"; 
+
+        let season = ["봄", "여름", "가을", "겨울"];
+        let array = [];
+
+        array[0] = "문자";
+        array[1] = 1111;
+        array[2] = true;
+
+        memo.innerHTML += "array = " + array + "<br>";
 
 
     </script>
