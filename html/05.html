@@ -33,7 +33,7 @@
             </div>
 
             <div class="col" id="footer">
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-primary" onClick="counter2(20)">카운터</button>
             </div>
         </div>
     </div>
@@ -48,6 +48,59 @@
         // one line my_family_count myFamilyCount;
         var i = 3;
         let j = 5;
+
+        for(let k=1; k<10; k++)
+        {
+            console.log("k = " + k);
+        }
+
+        function counter()
+        {
+            for(let i =1; i<10; i++)
+            {
+                console.log("counter = " + i);
+            }
+        }
+
+        function counter2(limit)
+        {
+            console.log("type of limit = " + typeof(limit));
+            
+            /*
+            if(typeof(limit) != 'number')
+            {
+                alert('숫자가 아님 .. 끝');
+                return;
+            }
+            */
+
+            for(let i =1; i<limit; i++)
+            {
+                console.log("counter2 = " + i);
+            }
+        }
+
+        
+
+        /*
+            기본 자료형
+                number, string, boolean, undefined, null
+            복합자료형 : array
+
+            타입확인 : typeof(변수명);
+        */
+
+        console.log("type of j = " + typeof(j));
+
+        counter2("홍길동");
+
+        let birthYear = 2000;
+        let a = 0.1;
+        let b = 0.2;
+        let c = a + b;
+
+
+
 
 
     </script>
