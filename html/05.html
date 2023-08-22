@@ -10,15 +10,47 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="style01.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
     </head>
 <body>
     <div class="container">
         <div class="row rowLine">
             <div class="col">
-                <h4 class="text-primary">FORM</h4>
+                <h4 class="text-primary">자바스크립트</h4>
+            </div>
+        </div>
+
+        <div class="row rowLine">
+            <div class="col" id="header">
+                Header
+            </div>
+            <div class="col" id="body">
+                Body
+            </div>
+            <div class="col" id="footer">
+                Footer
+            </div>
+
+            <div class="col" id="footer">
+                <button type="button" class="btn btn-primary">
             </div>
         </div>
     </div>
+
+    <script>
+        var headerold = document.getElementById('header');
+        var header = document.querySelector('#header');
+        header.onclick = function() {
+            header.style.background = "tomato";
+        }
+
+        // one line my_family_count myFamilyCount;
+        var i = 3;
+        let j = 5;
+
+
+    </script>
 
 </body>
 </html>
