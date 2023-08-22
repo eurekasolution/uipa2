@@ -14,6 +14,13 @@
 <body>
     Web Program <br>
 
+    <script>
+        function checkError()
+        {
+            alert('아이디를 확인하세요');
+        }
+    </script>
+
     <?php
         $i = 3;
         $i ++;
@@ -26,6 +33,13 @@
         {
             echo "$i<br>";
         }
+
+        include "04.php";
+
+        echo "i = $i<br>";
     ?>
+
+        <button type="button" class="btn btn-primary" onClick=checkError() >에러검사</button>
+
 </body>
 </html>
