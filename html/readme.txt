@@ -52,8 +52,17 @@ favicon.ico
 
 2. npm install -g @vue/cli
 
+D:\xampp\htdocs\vue>node -v
+v18.17.1
 
-https://v.daum.net/v/bbs/3 RESTful API
-http://test.com/bbs.php?id=3
+D:\xampp\htdocs\vue>npm -v
+9.6.7
 
-https://v.daum.net/v/a.php?id=test&pass=1111
+npm init vue@latest
+
+  cd hivue
+  npm install
+  npm run dev
+
+  port번호를 내가 지정하면서 서버실행
+  npm run dev -- --port 3000
