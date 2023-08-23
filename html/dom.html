@@ -20,9 +20,39 @@
                 <h4 class="text-primary">DOM</h4>
             </div>
         </div>
+
+        <div class="row rowLine">
+            <div class="col" id="display">
+                <h1>DOM Test</h1>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ul>
+
+                <h2>설명</h2>
+                <p>Hello
+                    <img src="code.png" id="img">
+
+                    <img src="code.png" width="100" height="300" alt="hello">
+
+
+                </p>
+            </div>
+        </div>
     </div>
 
     <script>
+        document.querySelector("#display h1").style.visibility = "visible";
+        var obj = document.querySelector("#display h1");
+        obj.innerHTML = "Hello World ";
+
+        var img = document.querySelector("#img");
+        var src = img.getAttribute("src");
+        console.log("src = " + src);
+        img.setAttribute("src", "html.png");
+
+        
 
     </script>
  
