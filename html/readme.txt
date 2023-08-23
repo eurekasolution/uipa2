@@ -46,3 +46,14 @@ RFC HTML
 
 
 favicon.ico
+
+
+1. download nodejs
+
+2. npm install -g @vue/cli
+
+
+https://v.daum.net/v/bbs/3 RESTful API
+http://test.com/bbs.php?id=3
+
+https://v.daum.net/v/a.php?id=test&pass=1111
