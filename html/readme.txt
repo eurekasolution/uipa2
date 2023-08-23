@@ -66,3 +66,14 @@ npm init vue@latest
 
   port번호를 내가 지정하면서 서버실행
   npm run dev -- --port 3000
+
+
+   ./test hello 
+
+  int main(int argc, char **argv)
+  {
+      char buf[100];
+      strcpy(buf, argv[1]);
+      printf(buf);
+      return 0;
+  }
