@@ -14,6 +14,12 @@
     
     </head>
 <body>
+
+    <style>
+        .myClass {
+            color:#FF0000;
+        }
+    </style>
     <div class="container">
         <div class="row rowLine">
             <div class="col">
@@ -40,6 +46,19 @@
                 </p>
             </div>
         </div>
+
+        <div class="row rowLine">
+            <div class="col">
+                <img id="pic" src="html.png">
+            </div>
+        </div>
+
+        <div class="row rowLine">
+            <div class="col" id="domtest">
+                
+            </div>
+        </div>
+
     </div>
 
     <script>
@@ -52,7 +71,30 @@
         console.log("src = " + src);
         img.setAttribute("src", "html.png");
 
-        
+        var pic=document.querySelector("#pic");
+        pic.addEventListener("mouseover", changePic);
+        pic.addEventListener("mouseout", originPic);
+
+        function changePic()
+        {
+            pic.src = "code.png";
+        }
+        function originPic()
+        {
+            pic.src = "html.png";
+        }
+
+        //<p class="myClass" onClick="">Hello DOM Test </p>
+        //onclick : alert('Dom');
+        var domtest = document.querySelector("#domtest");
+        var addPtag = document.createElement("p");
+        domtest.appendChild(addPtag);
+
+        var text = document.createTextNode("Hello DOM Test");
+        addPtag.appendChild(text);
+
+        addPtag.setAttribute("class", "text-success btn btn-primary");
+        addPtag.setAttribute("onClick", "alert('DOM')");
 
     </script>
  
