@@ -14,7 +14,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="style01.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     
     </head>
 <body>

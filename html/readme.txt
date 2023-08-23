@@ -23,3 +23,26 @@ select * from first where id='$id' and pass='$pass';
 select * from first where  id='' or 2>1  -- ' and pass='';
 
 
+---- 3일차 오전
+1. object.html
+2. dom.html
+
+sess폴더 만들기
+3. print.php
+4. login.php
+5. logout.php
+
+---- 3일차 오후
+Error(Status) Code in HTML
+
+RFC HTML
+
+1xx : Trying
+2xx : OK
+3xx : Temporary Error, Redirect Error
+4xx : Permanent Error, Client Error
+5xx : Server Error
+6xx : Global Error
+
+
+favicon.ico
