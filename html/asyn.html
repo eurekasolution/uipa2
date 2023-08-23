@@ -94,7 +94,30 @@
         // then, catch
 
         // Promise 객체 생성
-        const myPromise = new Promise( (resolve, reject) => { });
+        // 생성자  : 하나의 함수를 가지고 있다. (result, reject) => {}
+        const myPromise = new Promise( (resolve, reject) => { 
+
+            // 비동기 작업 수행
+            setTimeout( () => {
+                const rand = Math.random();
+                
+                if(rand < 0.5) 
+                {
+                    resolve("작업 성공 완료 : " + rand);
+                }else
+                {
+                    reject("작업 실패 : " + rand);
+                }
+            }  , 1000);
+        });
+
+        myPromise
+            .then( result => { 
+                console.log(result);
+            })
+            .catch( error => { 
+                console.log(error);
+            })
 
     </script>
 </body>
