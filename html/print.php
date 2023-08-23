@@ -1,3 +1,7 @@
+<?php
+    session_save_path("./sess");
+    session_start();
+?>
 <!doctype html>
 <html lang="ko">
     <head>
@@ -23,6 +27,19 @@
             </div>
         </div>
 
+        <?php
+            if(isset($_SESSION["sess_id"]))
+            {
+                ?>
+
+                <button type="button" class="btn btn-primary" onClick="location.href='logout.php'; "><?php echo $_SESSION["sess_name"] ?> 로그아웃</button>
+                
+                <?php
+            }else
+            {
+        ?>
+
+        <form method="POST" action="login.php">
         <div class="row rowLine">
             <div class="col">
                 ID
@@ -40,6 +57,11 @@
                 <button type="submit" class="btn btn-primary">로그인</button>
             </div>
         </div>
+        </form>
+
+        <?php
+            }
+        ?>
     </div>
  
 </body>
