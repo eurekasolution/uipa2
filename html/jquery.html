@@ -63,7 +63,39 @@
             <div class="col">
                 <input type="text" name="id" id="id" class="form-control" onKeyUp="ajaxCheckUnique()" >
             </div>
+            <div class="col" id="result">
+                
+            </div>
         </div>
     </div>
+
+    <script>
+        function ajaxCheckUnique()
+        {
+            var id = document.querySelector("#id");
+            //$("#result").html(id.value);
+            var jsonData = {
+                "id" : id.value,
+                "msg" : "Hello Ajax"
+            };
+
+            $.ajax({
+                url: "checkId.php",
+                type: "post",
+                cache: false,
+                data: JSON.stringify(jsonData),
+                contentType: "application/json",
+
+                success: function(data) {
+                    $("#result").html(data);
+                },
+                error:function(data){
+                    $("#result").html(data);
+                }
+            });
+
+        }
+
+    </script>
 </body>
 </html>
