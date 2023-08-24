@@ -1,14 +1,10 @@
 <template>
   <h1>{{ message }} </h1>
-  <h2> {{ items }} </h2>
 </template>
 
 <!-- Editor에서 색상 지원 설치 : Vetur -->
 <!--
-  data() 속성
-  Vue 에서는 반응형 변수, Vue 의 핵심 개념 중 하나.
-  데이터 변화를 감지하고 자동으로 DOM에 업데이트를 수행
-
+  Vue Life Cycle
 -->
 
 <script>
