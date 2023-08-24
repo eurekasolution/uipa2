@@ -102,22 +102,12 @@
   </div>
 </template>
 
-<!--
-  Vue Event
-    텍스트 입력 요소 input 이벤트 처리 할 때 사용
-    뷰 인스턴스의 데이터 id에 사용자 키 입력
-    입력한 값을 데이터에 반영
-
-    v-bind  .. 값이 변하면 v-model 양방향 directives를 이용해서 데이터 변경
--->
-
-
 <script>
   import { ref, computed } from 'vue'
 
   export default {
     setup() {
-      const message = "Vue Event ";
+      const message = "Vue Directive , if, for,. ";
       
       const id = ref("id");
       const pass = ref("pass");
@@ -148,8 +138,6 @@
           return "Unknown";
         }
       });
-
-      const onSubmit
 
 
       return {
