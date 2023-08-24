@@ -13,6 +13,43 @@
               <input type="text" class="form-control" v-bind:value="id">
           </div>
       </div>
+      <div class="row rowLine">
+          <div class="col-3">
+              v-bind memo
+          </div>
+          <div class="col">
+              <textarea rows="3" class="form-control" v-bind:value="memo"></textarea>
+          </div>
+      </div>
+
+      <div class="row rowLine">
+          <div class="col-3">
+              v-if dev
+          </div>
+          <div class="col">
+              <span v-if="developer">개발자</span>
+          </div>
+      </div>
+
+      <div class="row rowLine">
+          <div class="col-3">
+              v-show forein
+          </div>
+          <div class="col">
+              <span v-show="foreigner === 'yes' ">외국인</span>
+          </div>
+      </div>
+
+      <div class="row rowLine">
+          <div class="col-3">
+              v-for hobby
+          </div>
+          <div class="col">
+              <ol>
+                  <li v-for="hobby in hobbyList">{{ hobby }}</li>
+              </ol>
+          </div>
+      </div>
   </div>
 </template>
 
