@@ -32,11 +32,15 @@
 
       watch(price, (cur, prev) => {
         console.log(prev + " ------ " + cur);
+      }, 
+      { 
+        immediate:true 
       });
       
       return {
         message,
-        items
+        items,
+        price
       }
     },
 
