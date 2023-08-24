@@ -6,41 +6,58 @@
           </div>
       </div>
       <div class="row rowLine">
-          <div class="col">
-              CPU 가격
+          <div class="col-3">
+              v-bind id
           </div>
           <div class="col">
-              <input type="text" class="form-control" v-on:input="price=$event.target.value" v-bind:value="price">
+              <input type="text" class="form-control" v-bind:value="id">
           </div>
       </div>
   </div>
 </template>
 
 <script>
-  import { ref, watch } from 'vue'
+  import { ref, computed } from 'vue'
 
   export default {
     setup() {
-      const message = "Vue Watch ";
-      const items = ref([
-        { name : "CPU", price : 1000, count:1 },
-        { name : "MB", price : 1200, count:2 },
-        { name : "RAM", price : 800, count:1 },
-      ]);
-
-      const price = ref(10000);
-
-      watch(price, (cur, prev) => {
-        console.log(prev + " ------ " + cur);
-      }, 
-      { 
-        immediate:true 
-      });
+      const message = "Vue Directive , if, for,. ";
       
+      const id = ref("id");
+      const pass = ref("pass");
+      const memo = ref("memo");
+
+      const developer = ref(false);
+      const foreigner = ref("no");
+
+      const hobbyList = ref(["sleeping", "sports", "music"]);
+      const gender = ref("male");
+
+      const nationality = ref("01");
+      const carList = ref(["BMW", "Benz"]);
+
+      // computed
+      const getNationality = computed(() => {
+        if(nationality.value === "01")
+        {
+          return "Korea";
+        } else if(nationality.value === "02")
+        {
+          return "USA";
+        } else if(nationality.value === "03")
+        {
+          return "China";
+        } else
+        {
+          return "Unknown";
+        }
+      });
+
+
       return {
         message,
-        items,
-        price
+        id, pass, memo, developer, foreigner,
+        hobbyList, gender, nationality, carList, getNationality
       }
     },
 
