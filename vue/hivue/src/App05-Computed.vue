@@ -33,24 +33,15 @@
         </div>
       </div>
 
+
       <div class="row rowLine">
           <div class="col-3">
               합계
           </div>
           <div class="col">
-            {{ totalPrice() }}
+            {{ totalPrice }}
           </div>
       </div>
-      <div class="row rowLine">
-          <div class="col-3">
-              버튼
-          </div>
-          <div class="col">
-              <button type="button" class="btn btn-primary" @click="sayHello">Click to sayHello()</button>
-          </div>
-      </div>
-
-
 
 
   </div>
@@ -88,8 +79,6 @@
     복잡한 수식을 미리 계산하기
     렌더링 속도 개선.
 
-    method()
-
 -->
 
 <script>
@@ -104,25 +93,11 @@
         { name : "RAM", price : 800, count:1 },
       ]);
 
-       /*
       const totalPrice = computed(() => {
         return items.value.reduce( function(sum, item){
           return sum + (item.price * item.count);
         }, 0);
       });
-      */
-      
-    
-     const totalPrice = () => {
-        return items.value.reduce( function(sum, item){
-          return sum + (item.price * item.count);
-        }, 0);
-     }
-
-
-     
-
-
 
       onBeforeMount( () => {
         console.log("beforeMount");
@@ -142,15 +117,7 @@
         items,
         totalPrice
       }
-    },
-
-    // setup() 밖에..
-    methods : {
-      sayHello() {
-        alert("Hello Vue 3");
-      }
     }
-
   }
 </script>
 
