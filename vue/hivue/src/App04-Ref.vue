@@ -3,23 +3,9 @@
   <h2>{{ items }} </h2>
   <ul>
     <li v-for="item in items" v-bind:key="item.name"> 
-      {{ item.name }} 의 가격 : 
-      <input type="text" v-on:input="item.price=$event.target.value" v-bind:value="item.price">
-    </li>
-  </ul>
-
-  <hr>
-
-  <ul>
-    <li v-for="item in items" v-bind:key="item.name"> 
       {{ item.name }} : {{ item.price }}  * {{ item.count}} = {{ item.price * item.count}} 원
     </li>
   </ul>
-
-  <hr>
-  <p>합계 : {{ totalPrice }} 원 </p>
-
-
 
 
 </template>
@@ -27,15 +13,19 @@
 <!-- Editor에서 색상 지원 설치 : Vetur -->
 <!--
   data() 속성
-  computed 속성
-    기본 데이터에서 계산된 값을 속성으로 공개.
-    복잡한 수식을 미리 계산하기
-    렌더링 속도 개선.
+  Vue 에서는 반응형 변수, Vue 의 핵심 개념 중 하나.
+  데이터 변화를 감지하고 자동으로 DOM에 업데이트를 수행
+
+  App.vue 템플릿 문법
+    items 데이터와 뷰의 관계
+  v-bind
+
+    HTML : #id, .class, style등의 HTML 속성값에 뷰 데이터 값 연결
 
 -->
 
 <script>
-  import { ref, computed, onBeforeMount, onMounted, onBeforeUpdate, onUpdated } from 'vue'
+  import { ref, onBeforeMount, onMounted, onBeforeUpdate, onUpdated } from 'vue'
 
   export default {
     setup() {
@@ -45,12 +35,6 @@
         { name : "MB", price : 1200, count:2 },
         { name : "RAM", price : 800, count:1 },
       ]);
-
-      const totalPrice = computed(() => {
-        return items.value.reduce( function(sum, item){
-          return sum + (item.price * item.count);
-        }, 0);
-      });
 
       onBeforeMount( () => {
         console.log("beforeMount");
@@ -67,8 +51,7 @@
 
       return {
         message,
-        items,
-        totalPrice
+        items
       }
     }
   }
