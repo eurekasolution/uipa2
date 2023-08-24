@@ -1,6 +1,53 @@
 <template>
-  <h1>{{ message }} </h1>
-  <h2>{{ items }} </h2>
+  <div class="container">
+      <div class="row rowLine">
+          <div class="col">
+              <h1 class="text-primary">{{ message }} </h1>
+          </div>
+      </div>
+      <div class="row rowLine">
+          <div class="col">
+              <h2>{{ items }} </h2>
+          </div>
+      </div>
+
+      <div v-for="item in items" v-bind:key="item.name">
+        <div class="row rowLine">
+            <div class="col-3">
+                {{ item.name }} 의 가격
+            </div>
+            <div class="col">
+              <input type="text" class="form-control text-end" v-on:input="item.price=$event.target.value" v-bind:value="item.price">
+            </div>
+        </div>
+      </div>
+
+      <div v-for="item in items" v-bind:key="item.name">
+        <div class="row rowLine">
+            <div class="col-3">
+                {{ item.name }} 의 가격
+            </div>
+            <div class="col">
+              {{ item.name }} : {{ item.price }}  * {{ item.count}} = {{ item.price * item.count}} 원
+            </div>
+        </div>
+      </div>
+
+      <div v-for="item in items" v-bind:key="item.name">
+        <div class="row rowLine">
+            <div class="col-3">
+                합계
+            </div>
+            <div class="col">
+              {{ totalPrice }}
+            </div>
+        </div>
+      </div>
+
+  </div>
+
+  <!--
+  
   <ul>
     <li v-for="item in items" v-bind:key="item.name"> 
       {{ item.name }} 의 가격 : 
@@ -19,7 +66,7 @@
   <hr>
   <p>합계 : {{ totalPrice }} 원 </p>
 
-
+  -->
 
 
 </template>
@@ -75,5 +122,15 @@
 </script>
 
 <style scoped>
-  h1 { color:#FF0000;}
+  .row {
+    min-height:30px;
+    padding:10px 0px 10px 0px;
+  }
+
+  .rowLine {
+      border-left:0px solid #CCCCCC;
+      border-right:0px solid #CCCCCC;
+      border-bottom:1px dotted #CCCCCC;
+      border-top:0px solid #CCCCCC;
+  }
 </style>
