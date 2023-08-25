@@ -10,7 +10,7 @@
               v-on:input id
           </div>
           <div class="col">
-              <input type="text" class="form-control" v-on:input="id=$event.target.value" v-bind:value="id">
+              <input type="text" readonly class="form-control" v-on:input="id=$event.target.value" v-bind:value="id">
           </div>
       </div>
       <div class="row rowLine">
@@ -26,7 +26,7 @@
               v-bind memo
           </div>
           <div class="col">
-              <textarea rows="3" class="form-control" v-bind:value="memo"></textarea>
+              <textarea rows="3" class="form-control"  v-model="memo"></textarea>
           </div>
       </div>
 
@@ -54,7 +54,7 @@
 
       <div class="row rowLine">
           <div class="col-3">
-              v-show forein
+              v-on:change forein
           </div>
           <div class="col">
               <span v-show="foreigner === 'yes' ">외국인</span>
@@ -63,33 +63,40 @@
 
       <div class="row rowLine">
           <div class="col-3">
-              v-for hobby
+              v-model hobby
           </div>
           <div class="col">
-              <ol>
-                  <li v-for="hobby in hobbyList">{{ hobby }}</li>
-              </ol>
+              <input type="checkbox" id="sleeping"  value="sleeping" v-model="hobbyList">
+               <label for="sleeping">잠 &nbsp; </label>
+              <input type="checkbox" value="fishing" v-model="hobbyList">
+               낚시 &nbsp; 
+              <input type="checkbox" value="sports" v-model="hobbyList">
+               운동 &nbsp; 
           </div>
       </div>
 
       <div class="row rowLine">
           <div class="col-3">
-              v-if else gender
+              v-model gender
           </div>
           <div class="col">
-              성별 <span v-if="gender === 'male' ">Male </span> 
-              <span v-else>Female</span>
+              <input type="radio" value="Male" v-model="gender"> 남 
+              <input type="radio" value="Female" v-model="gender"> 여 
           </div>
       </div>
       <div class="row rowLine">
           <div class="col-3">
-              v-if else if
+              v-model
           </div>
           <div class="col">
-              <span v-if="nationality == '01' ">Korea</span>
-              <span v-else-if="nationality == '02' ">USA</span>
-              <span v-else-if="nationality == '03' ">China</span>
-              <span v-else>Unknown</span>
+              <select v-model="nationality" class="form-control">
+                <option disabled value="">Please Select</option>
+                <option value="01">Korea</option>
+                <option value="02">USA</option>
+                <option value="03">China</option>
+                <option value="04">Japan</option>
+
+              </select>
           </div>
       </div>
       <div class="row rowLine">
