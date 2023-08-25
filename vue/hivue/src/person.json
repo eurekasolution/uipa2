@@ -1,0 +1,7 @@
+[
+    {name : "홍길동", age : 12, address : "서울시 종로구"},
+    {name : "이순신", age : 34, address : "경남 통영"},
+    {name : "대조영", age : 23, address : "만주벌판"},
+    {name : "광개토대왕", age : 43, address : "함경북도 함흥"},
+    {name : "을지문덕", age : 31, address : "평양"}
+]

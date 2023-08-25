@@ -7,10 +7,18 @@
       </div>
       <div class="row rowLine">
           <div class="col-3">
-              v-bind id
+              v-on:input id
           </div>
           <div class="col">
-              <input type="text" class="form-control" v-bind:value="id">
+              <input type="text" class="form-control" v-on:input="id=$event.target.value" v-bind:value="id">
+          </div>
+      </div>
+      <div class="row rowLine">
+          <div class="col-3">
+              v-on:change pass
+          </div>
+          <div class="col">
+              <input type="text" class="form-control" v-on:change="pass=$event.target.value" v-bind:value="pass">
           </div>
       </div>
       <div class="row rowLine">
@@ -24,11 +32,18 @@
 
       <div class="row rowLine">
           <div class="col-3">
-              v-if dev
+              v-on:change dev
           </div>
           <div class="col">
-              <span v-if="developer">개발자</span>
+              <input type="checkbox" v-on:change="controlCheckBox">
           </div>
+          <div class="col">
+              <input type="checkbox" v-on:change="controlCheckBox2">
+          </div>
+          <div class="col">
+              <input type="checkbox" v-on:change="controlCheckBox2($event)">
+          </div>
+
       </div>
 
       <div class="row rowLine">
@@ -149,13 +164,23 @@
         }
       });
 
-      const onSubmit
+      const onSubmit = () => {
+        console.log("id = ", id);
+      }
 
+      const controlCheckBox = () => {
+        console.log("control Check Box");
+      }
+      const controlCheckBox2 = (event) => {
+        console.log("control Check Box2");
+        console.log("event = ", event);
+      }
 
       return {
         message,
         id, pass, memo, developer, foreigner,
-        hobbyList, gender, nationality, carList, getNationality
+        hobbyList, gender, nationality, carList, getNationality,
+        onSubmit, controlCheckBox, controlCheckBox2
       }
     },
 
