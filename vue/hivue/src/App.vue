@@ -2,14 +2,18 @@
   <div class="container">
       <div class="row rowLine">
           <div class="col">
-              <h1 class="text-primary">{{ message }} </h1>
+              <h1 class="text-primary">JSON DATA</h1>
+
+              {{jsonData}}
           </div>
       </div>
       <div class="row rowLine">
             <div class="col">
-                <div id="app">
-                    <AxiosComponent/>
-                </div>
+                <ul>
+                    <li v-for="(person, index) in jsonData" :key="index">
+                        이름 : {{ person.name }} 나이 : {{ person.age }}
+                    </li>
+                </ul>
             </div>
       </div>
   </div>
@@ -24,15 +28,49 @@
 
 
 <script>
-  import { ref, computed } from 'vue'
-  import AxiosComponent from "@/components/Axios.vue"
+  import { ref, onMounted } from 'vue'
+  import fs from 'fs'
 
   export default {
-    components: {
-        AxiosComponent
-    },
+    setup() {
+        const jsonData = ref([]);
 
-    name : "App",
+        // JSON 경로
+        const path = "./src/person.json";
+        // JSON 파일을 비동기로 읽기
+
+        const readJsonFile = async () => {
+            console.log("read json file")
+
+            try {
+                const response = await fetch(path);
+                if(!response.ok) {
+                    throw new Error("JSON 파일 로딩 에러")
+                }
+                const data = await response.json();
+                jsonData.value = data;
+
+                console.log("data = " + data)
+            }catch(error)
+            {
+                console.error("JSON FILE Loading Error:" , error);
+            }
+        };
+
+        onMounted(async () => {
+            console.log("mounted");
+            readJsonFile();
+        });
+        
+
+        return {
+            jsonData
+        };
+
+        
+    }
+
+    
     
 
   }
