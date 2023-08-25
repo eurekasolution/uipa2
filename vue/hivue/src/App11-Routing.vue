@@ -12,60 +12,42 @@
               <router-view></router-view>
           </div>
       </div>
-      <div class="row rowLine">
-          <div class="col">
-              <button @click="openModal" type="button" class="btn btn-primary">Open Modal</button>
-              <modal title="모달제목" v-if="isVisible" @close="closeModal">
-                <p>
-                    모달창 입니다. <br>
-                    모달창 입니다. <br>
-                    모달창 입니다. <br>
-                    모달창 입니다. <br>
-                    모달창 입니다. <br>
-                    모달창 입니다. <br>
-                    모달창 입니다. <br>
-                </p>
-              </modal>
-          
-          </div>
-      </div>
   </div>
 
 </template>
 
 <!--
-  Vue Modal
+  Vue Routing
 
+    routing을 하려면 프로그램 설치가 되어 있어야 사용 가능하다.
+
+    cmd창에서
+    npm install vue-router@next
+
+    $> npm install vue-router@next
+    #> npm install vue-router@next
+
+    Home, About 페이지가 있다고 가정하면
+
+    원하는 소스트리의 구조
+
+    main.js,
+    App.vue,
+    componets/Home.vue,
+    components/About.vue, 
     
 -->
 
 
 <script>
   import { ref, computed } from 'vue'
-  import Modal from "./components/Modal.vue"
 
   export default {
-    components: {
-        Modal
-    },
     setup() {
-      const message = ref("모달 부모창");
-      const isVisible = ref(false);
-      const modalTitle = ref("모달 제목");
-
-      const openModal = () => { 
-        isVisible.value = true;
-      }
-      const closeModal = () => { 
-        isVisible.value = false;
-      }
-
+      const message = ref("Vue Routing ");
 
       return {
         message,
-        isVisible,
-        openModal,
-        closeModal
       }
     },
 
