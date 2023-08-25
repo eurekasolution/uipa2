@@ -7,7 +7,7 @@
         <div class="modal-wrapper">
             <div class="modal-container">
                 <div class="modal-header">
-                    <h3>{{ title }} {{ message }}</h3>
+                    <h3>A{{ title }} B{{ message }}</h3>
                     <button  @click="closeModal">Close</button>
                 </div>
                 <div class="modal-body">
