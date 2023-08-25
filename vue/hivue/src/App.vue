@@ -43,6 +43,12 @@
           <div class="col">
               <input type="checkbox" v-on:change="controlCheckBox2($event)">
           </div>
+          <div class="col">
+              <input type="checkbox" v-on:change="controlCheckBox3('my message')">
+          </div>
+          <div class="col">
+              <input type="checkbox" v-on:change="controlCheckBox4('msg + event', $event)">
+          </div>
 
       </div>
 
@@ -175,12 +181,20 @@
         console.log("control Check Box2");
         console.log("event = ", event);
       }
+      const controlCheckBox3 = (msg) => {
+        console.log("control Check Box3");
+        console.log("msg = ", msg);
+      }
+      const controlCheckBox4 = (msg, event) => {
+        console.log("control Check Box4");
+        console.log("msg = " + msg + ", event = ", event);
+      }
 
       return {
         message,
         id, pass, memo, developer, foreigner,
         hobbyList, gender, nationality, carList, getNationality,
-        onSubmit, controlCheckBox, controlCheckBox2
+        onSubmit, controlCheckBox, controlCheckBox2, controlCheckBox3, controlCheckBox4
       }
     },
 
