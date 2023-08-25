@@ -13,25 +13,10 @@
 </template>
 
 <!--
-  Vue Routing
+  Vue Inline Style
 
-    routing을 하려면 프로그램 설치가 되어 있어야 사용 가능하다.
-
-    cmd창에서
-    npm install vue-router@next
-
-    $> npm install vue-router@next
-    #> npm install vue-router@next
-
-    Home, About 페이지가 있다고 가정하면
-
-    원하는 소스트리의 구조
-
-    main.js,
-    App.vue,
-    componets/Home.vue,
-    components/About.vue, 
-    
+  Style Sheet를 사용하지 않고, 
+  데이터로 스타일을 만들고, 이것을 v-bind로 읽는 인라인스타일
 -->
 
 
@@ -40,7 +25,7 @@
 
   export default {
     setup() {
-      const message = ref("Vue Routing ");
+      const message = ref("Vue Inline Style ");
       const yourMessage = ref("Vue Inline Style Your Message ");
       
       const myStyle = ref({
